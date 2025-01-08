@@ -37,7 +37,22 @@ public class WeatherData
     */
     public int longestHeatWave(double threshold)
     { /* to be implemented in part (b) */ 
-        return 0;
+        int heatWave = 0;
+        int max = 0;
+        for(double t : temperatures)
+        {
+            if (t>threshold)
+            {
+                heatWave++;
+            }else{
+                heatWave = 0;
+            }
+            if(heatWave > max)
+            {
+                max = heatWave;
+            }
+        }
+        return max;
     }
     
     // There may be instance variables, constructors, and methods that are not shown.
